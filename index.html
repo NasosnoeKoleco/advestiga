@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advestiga — Агрегатор скидок, мастеров и финансовых решений для ремонта</title>
+    <meta name="description" content="Единый навигатор по ремонту и строительству: акции строительных гипермаркетов, проверенные сервисы подбора мастеров, рассрочки без процентов и строительные калькуляторы.">
+    <link rel="icon" href="./favicon.ico" sizes="any">
+    <link rel="icon" href="./icon-192.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+	<link rel="canonical" href="https://advestiga.ru/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Advestiga — Навигатор выгодных решений для ремонта и дома">
+    <meta property="og:description" content="Скидки на материалы, проверенные мастера, рассрочки 0% и онлайн-калькуляторы сметы.">
+    <meta property="og:url" content="https://advestiga.ru/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что такое Advestiga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Advestiga — это независимый агрегатор и гид по ремонту, объединяющий проверенные строительные маркетплейсы, сервисы подбора бригад и выгодные финансовые инструменты."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как экономить на покупке стройматериалов?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Используйте расчет точной сметы в строительных калькуляторах, активируйте промокоды маркетплейсов и оформляйте покупки с картами рассрочки с длинным беспроцентным периодом."
+          }
+        }
+      ]
+    }
+    </script>
+	
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112750370', 'ym');
+
+    ym(112750370, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/112750370" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --header-bg: #ffffff;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --accent: #10b981;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+            --btn-sub-bg: #f1f5f9;
+            --erid-text: #94a3b8;
+        }
+
+        [data-theme="dark"] {
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --bg: #0f172a;
+            --header-bg: #1e293b;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --accent: #34d399;
+            --badge-bg: rgba(59, 130, 246, 0.15);
+            --badge-text: #93c5fd;
+            --btn-sub-bg: #334155;
+            --erid-text: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* Шапка */
+        header {
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+        }
+
+        .logo-text span {
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        /* Hero-блок с поиском */
+        .hero {
+            text-align: center;
+            padding: 36px 12px 28px;
+        }
+
+        .hero h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 640px;
+            margin: 0 auto 24px;
+        }
+
+        .search-box {
+            max-width: 520px;
+            margin: 0 auto 10px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 18px 14px 44px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            color: var(--text-main);
+            font-size: 0.95rem;
+            outline: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        /* Быстрые фильтры */
+        .tabs-wrap {
+            overflow-x: auto;
+            scrollbar-width: none;
+            margin: 20px 0 28px;
+            padding-bottom: 4px;
+        }
+
+        .tabs-wrap::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            width: max-content;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 9px 18px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        /* Сетка предложений */
+        .offers-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        @media (min-width: 700px) {
+            .offers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 960px) {
+            .offers-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .offer-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+        }
+
+        .offer-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .offer-top {
+            margin-bottom: 16px;
+        }
+
+        .offer-category-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 10px;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+        }
+
+        .badge-masters { background: rgba(245, 158, 11, 0.15); color: #d97706; }
+        [data-theme="dark"] .badge-masters { color: #fbbf24; }
+
+        .badge-finance { background: rgba(16, 185, 129, 0.15); color: #059669; }
+        [data-theme="dark"] .badge-finance { color: #34d399; }
+
+        .badge-tools { background: rgba(168, 85, 247, 0.15); color: #9333ea; }
+        [data-theme="dark"] .badge-tools { color: #c084fc; }
+
+        .offer-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--text-main);
+        }
+
+        .offer-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            line-height: 1.45;
+        }
+
+        .offer-perks {
+            list-style: none;
+            margin-bottom: 14px;
+        }
+
+        .offer-perks li {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 4px;
+        }
+
+        .offer-perks li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .btn-offer {
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            background: var(--primary);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.88rem;
+            padding: 11px;
+            border-radius: 8px;
+        }
+
+        .btn-offer:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .ad-erid {
+            font-size: 0.65rem;
+            color: var(--erid-text);
+            margin-top: 10px;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        /* SEO-блок FAQ */
+        .seo-section {
+            margin-top: 60px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .seo-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        details {
+            border-bottom: 1px solid var(--border);
+            padding: 12px 0;
+            cursor: pointer;
+        }
+
+        details:last-child {
+            border-bottom: none;
+        }
+
+        summary {
+            font-size: 0.95rem;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '＋';
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        details[open] summary::after {
+            content: '—';
+        }
+
+        details p {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Подвал */
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <a href="/" class="logo-wrap">
+            <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="10" fill="#2563EB"/>
+                <path d="M20 7L28.66 22H11.34L20 7Z" fill="white"/>
+                <circle cx="20" cy="27" r="3" fill="#34D399"/>
+            </svg>
+            <div class="logo-text">ADVESTIGA<span>.RU</span></div>
+        </a>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">🌙</button>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h1>Экосистема выгодного ремонта</h1>
+        <p>Навигатор по строительным гипермаркетам, базам проверенных мастеров, онлайн-калькуляторам смет и беспроцентным рассрочкам.</p>
+
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Поиск: ламинат, рассрочка, плиточник, расчет..." oninput="filterOffers()">
+        </div>
+    </section>
+
+    <!-- Горизонтальные табы-фильтры -->
+    <div class="tabs-wrap">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="setCategory('all', this)">Все категории</button>
+            <button class="tab-btn" onclick="setCategory('materials', this)">🧱 Материалы</button>
+            <button class="tab-btn" onclick="setCategory('masters', this)">🛠️ Мастера и бригады</button>
+            <button class="tab-btn" onclick="setCategory('finance', this)">💳 Рассрочка 0%</button>
+            <button class="tab-btn" onclick="setCategory('tools', this)">📐 Инструменты и сметы</button>
+        </div>
+    </div>
+
+    <!-- Витрина офферов -->
+    <div class="offers-grid" id="offersGrid">
+
+        <!-- КАРТОЧКА 1: Kevloro (связка с вашим калькулятором) -->
+        <div class="offer-card" data-cat="tools" data-tags="смета калькулятор полы ламинат spc керамогранит kevloro">
+            <div class="offer-top">
+                <span class="offer-category-badge badge-tools">Инструменты</span>
+                <h2 class="offer-title">Kevloro Калькулятор</h2>
+                <p class="offer-desc">Профессиональный расчет сметы напольных покрытий: точный запас, подложка, плинтусы и экспорт в Excel.</p>
+                <ul class="offer-perks">
+                    <li>Бесплатный расчет за 1 минуту</li>
+                    <li>Работает без интернета (PWA)</li>
+                    <li>Учет дверей, стояков отопления и углов</li>
+                </ul>
+            </div>
+            <div>
+                <a href="https://kevloro.ru/" target="_blank" rel="noopener" class="btn-offer">Рассчитать смету онлайн →</a>
+            </div>
+        </div>
+
+        <!-- КАРТОЧКА 2: Яндекс Маркет 
+        <div class="offer-card" data-cat="materials" data-tags="маркет яндекс материалы ламинат плитка сантехника скидки доставка">
+            <div class="offer-top">
+                <span class="offer-category-badge">Материалы</span>
+                <h2 class="offer-title">Яндекс Маркет</h2>
+                <p class="offer-desc">Сравнение цен на отделочные материалы, сантехнику и инструмент со скидками и подъемом на этаж.</p>
+                <ul class="offer-perks">
+                    <li>Кешбэк баллами Яндекс Плюса</li>
+                    <li>Сравнение цен сотен поставщиков</li>
+                    <li>Спецкупоны на первую покупку</li>
+                </ul>
+            </div>
+            <div>
+                <a href="https://market.yandex.ru" target="_blank" rel="noopener sponsored" class="btn-offer">Смотреть каталог со скидками →</a>
+                <div class="ad-erid">Реклама. ООО «ЯНДЕКС», ИНН 7736207543, erid: ВАШ_ТОКЕН</div>
+            </div>
+        </div> -->
+
+        <!-- КАРТОЧКА 3: Мастера 
+        <div class="offer-card" data-cat="masters" data-tags="мастера укладка ремонт отделка плиточник профи услуги бригада">
+            <div class="offer-top">
+                <span class="offer-category-badge badge-masters">Исполнители</span>
+                <h2 class="offer-title">База проверенных мастеров</h2>
+                <p class="offer-desc">Сервис прямого подбора частных специалистов и строительных бригад с подтвержденным портфолио.</p>
+                <ul class="offer-perks">
+                    <li>Договор и фиксация цены до начала работ</li>
+                    <li>Рейтинг на основе реальных отзывов</li>
+                    <li>Бесплатный подбор за 15 минут</li>
+                </ul>
+            </div>
+            <div>
+                <a href="#" target="_blank" rel="noopener sponsored" class="btn-offer">Найти мастера по смете →</a>
+                <div class="ad-erid">Реклама. Информация о сервисе, erid: ВАШ_ТОКЕН</div>
+            </div>
+        </div> -->
+
+        <!-- КАРТОЧКА 4: Рассрочка 
+        <div class="offer-card" data-cat="finance" data-tags="рассрочка кредит банк халва покупки без процентов финансы">
+            <div class="offer-top">
+                <span class="offer-category-badge badge-finance">Рассрочка</span>
+                <h2 class="offer-title">Карта рассрочки 0%</h2>
+                <p class="offer-desc">Покупайте стройматериалы в гипермаркетах сразу, а возвращайте частями до 12–24 месяцев без первого взноса.</p>
+                <ul class="offer-perks">
+                    <li>0% переплат при соблюдении графика</li>
+                    <li>Лимит до 500 000 ₽ онлайн</li>
+                    <li>Бесплатный выпуск и доставка курьером</li>
+                </ul>
+            </div>
+            <div>
+                <a href="#" target="_blank" rel="noopener sponsored" class="btn-offer">Оформить карту рассрочки →</a>
+                <div class="ad-erid">Реклама. Информация о банке, erid: ВАШ_ТОКЕН</div>
+            </div>
+        </div> -->
+
+        <!-- КАРТОЧКА 5: Кредитка с беспроцентным периодом 
+        <div class="offer-card" data-cat="finance" data-tags="деньги кредитная карта кэшбэк банк лимит финансы">
+            <div class="offer-top">
+                <span class="offer-category-badge badge-finance">Финансы</span>
+                <h2 class="offer-title">Резервный бюджет на ремонт</h2>
+                <p class="offer-desc">Кредитная карта с длинным льготным периодом (до 365 дней без процентов) для непредвиденных расходов на объекте.</p>
+                <ul class="offer-perks">
+                    <li>До 1 года без процентов на первые покупки</li>
+                    <li>Повышенный кэшбэк на стройматериалы</li>
+                    <li>Решение онлайн за 2 минуты</li>
+                </ul>
+            </div>
+            <div>
+                <a href="#" target="_blank" rel="noopener sponsored" class="btn-offer">Узнать одобренный лимит →</a>
+                <div class="ad-erid">Реклама. Информация о банке, erid: ВАШ_ТОКЕН</div>
+            </div>
+        </div> -->
+
+    </div>
+
+    <!-- SEO FAQ -->
+    <section class="seo-section">
+        <h2 class="seo-title">Часто задаваемые вопросы о планировании ремонта</h2>
+        <details>
+            <summary>Как избежать переплат при закупке чистовых материалов?</summary>
+            <p>Всегда закладывайте нормативный запас на подрезку (от 5% для классической укладки до 15% для «ёлочки») и проверяйте партии упаковок перед оплатой. Использование сметных калькуляторов позволяет исключить покупку лишних рулонов подложки и погонных метров плинтуса.</p>
+        </details>
+        <details>
+            <summary>В чем выгода оформления карт рассрочки под закупку ремонта?</summary>
+            <p>Карты рассрочки позволяют зафиксировать текущие акционные цены на материалы в строительных гипермаркетах, не выводя сразу крупную сумму из личного бюджета. Платежи делятся на равные месячные доли без процентов.</p>
+        </details>
+        <details>
+            <summary>Как проверить квалификацию наемного мастера?</summary>
+            <p>Запрашивайте фото узлов примыкания, стыков плитки и подрезки дверных коробок с реальных объектов, заключайте договор с поэтапной оплатой по факту выполнения работ и не вносите 100% аванс за работу вперед.</p>
+        </details>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Advestiga.ru — навигатор строительных и финансовых решений для дома.</p>
+        <p style="margin-top: 6px;">Сайт не является кредитной организацией или подрядчиком. Условия предоставления услуг уточняйте у рекламодателей.</p>
+    </div>
+</footer>
+
+<script>
+    // Тема
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('advestiga_theme');
+
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggleBtn.textContent = '☀️';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            themeToggleBtn.textContent = '🌙';
+        }
+    }
+
+    applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+
+    themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const nextTheme = isDark ? 'light' : 'dark';
+        applyTheme(nextTheme);
+        localStorage.setItem('advestiga_theme', nextTheme);
+    });
+
+    // Фильтрация и поиск
+    let currentCategory = 'all';
+
+    function setCategory(cat, btn) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = cat;
+        filterOffers();
+    }
+
+    function filterOffers() {
+        const query = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+        const cards = document.querySelectorAll('.offer-card');
+
+        cards.forEach(card => {
+            const matchesCategory = (currentCategory === 'all' || card.dataset.cat === currentCategory);
+            const tags = (card.dataset.tags || '').toLowerCase();
+            const text = card.innerText.toLowerCase();
+            const matchesQuery = !query || tags.includes(query) || text.includes(query);
+
+            if (matchesCategory && matchesQuery) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
